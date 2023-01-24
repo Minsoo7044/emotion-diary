@@ -6,6 +6,8 @@ import MyButton from "../components/MyButton";
 import EmotionItem from "./EmotionItem";
 import { DiaryDispatchContext } from "../App";
 
+import { getStringDate } from "../util/date";
+
 const emotionList = [
   {
     emotion_id: 1,
@@ -33,10 +35,6 @@ const emotionList = [
     emotion_descript: "완전 나쁨",
   },
 ];
-
-const getStringDate = (date) => {
-  return date.toISOString().slice(0, 10);
-};
 
 const DiaryEditor = ({ isEdit, originData }) => {
   const navigate = useNavigate();
