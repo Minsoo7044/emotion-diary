@@ -4,6 +4,7 @@ import { DiaryStateContext } from "../App";
 import MyButton from "../components/MyButton";
 import MyHeader from "../components/MyHeader";
 import { getStringDate } from "../util/date";
+import { emotionList } from "../util/emotion";
 
 const Diary = () => {
   const { id } = useParams();
@@ -20,13 +21,24 @@ const Diary = () => {
     }
   }, [id, diaryList, navigate]);
 
+  if (!data) return <></>;
+
+  const curEmotionData = emotionList.find((it) => parseInt(it.emotion_id) === parseInt(data.emotion));
+
   return (
-    <div className="DiaryPage">
+    <div className="Diary">
       <MyHeader
         headText={`${data && getStringDate(new Date(data.date))} 기록`}
         leftChild={<MyButton text={"< 뒤로가기"} onClick={() => navigate(-1)} />}
         rightChild={<MyButton text={"수정하기"} onClick={() => navigate(`/edit/${data.id}`)} />}
       />
+      <article>
+        <section>
+          <h4>오늘의 감정</h4>
+          <img src={curEmotionData.emotion_img} alt="" />
+          <div className="emotion_descript">{curEmotionData.emotion_descript}</div>
+        </section>
+      </article>
     </div>
   );
 };

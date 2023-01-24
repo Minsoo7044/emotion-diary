@@ -160,10 +160,6 @@ header button {
 
 /* DiaryEditor */
 
-.DiaryEditor {
-
-}
-
 .DiaryEditor section {
   margin-bottom: 40px;
 }
@@ -257,4 +253,25 @@ header button {
 .EmotionItem_on_5 {
   background-color: #fd565f;
   color: white;
+}
+
+/* Diary */
+
+.Diary section {
+  width: 100%;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.Diary h4 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.Diary .emotion_descript {
+  font-size: 25px;
+  margin-top: 30px;
 }
