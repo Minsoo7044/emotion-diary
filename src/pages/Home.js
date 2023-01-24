@@ -15,7 +15,7 @@ const Home = () => {
     if (diaryList.length >= 1) {
       const firstDay = new Date(curDate.getFullYear(), curDate.getMonth(), 1).getTime();
 
-      const lastDay = new Date(curDate.getFullYear(), curDate.getMonth() + 1, 0).getTime();
+      const lastDay = new Date(curDate.getFullYear(), curDate.getMonth() + 1, 0, 23, 59, 59).getTime();
 
       setData(diaryList.filter((it) => firstDay <= it.date && lastDay >= it.date));
     }
@@ -36,7 +36,7 @@ const Home = () => {
         leftChild={<MyButton text={"<"} onClick={decreaseMonth} />}
         rightChild={<MyButton text={">"} onClick={increaseMonth} />}
       />
-      <DiaryList diaryList={data}/>
+      <DiaryList diaryList={data} />
     </div>
   );
 };
