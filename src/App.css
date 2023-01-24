@@ -218,7 +218,7 @@ header button {
 }
 
 .EmotionItem img {
-  width: 50%;  
+  width: 50%;
   margin-bottom: 10px;
 }
 
@@ -274,4 +274,21 @@ header button {
 .Diary .emotion_descript {
   font-size: 25px;
   margin-top: 30px;
+}
+
+.Diary .diary_content_wrapper {
+  width: 100%;
+  background-color: #ececec;
+  border-radius: 5px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.Diary .diary_content_wrapper p {
+  padding: 20px;
+  text-align: left;
+  font-size: 20px;
+  font-family: "Yeon Sung";
+  font-weight: 400;
+  line-height: 2.5;
 }

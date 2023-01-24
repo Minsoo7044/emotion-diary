@@ -38,6 +38,12 @@ const Diary = () => {
           <img src={curEmotionData.emotion_img} alt="" />
           <div className="emotion_descript">{curEmotionData.emotion_descript}</div>
         </section>
+        <section>
+          <h4>오늘의 일기</h4>
+          <div className="diary_content_wrapper">
+            <p>{data.content}</p>
+          </div>
+        </section>
       </article>
     </div>
   );
