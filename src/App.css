@@ -57,6 +57,7 @@ body {
 .MyButton_negative {
   background-color: #fd565f;
   color: white;
+  margin-right: 10px;
 }
 
 /* MyHeader */
