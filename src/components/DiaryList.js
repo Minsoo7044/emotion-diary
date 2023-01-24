@@ -3,16 +3,7 @@ import { useNavigate } from "react-router-dom";
 import DiaryItem from "./DiaryItem";
 import MyButton from "./MyButton";
 
-const sortOptionList = [
-  { value: "latest", name: "최신순" },
-  { value: "oldest", name: "오랜된 순" },
-];
-
-const filterOptionList = [
-  { value: "all", name: "전부다" },
-  { value: "good", name: "좋은 감정만" },
-  { value: "bad", name: "안 좋은 감정만" },
-];
+import { sortOptionList, filterOptionList } from "../util/option";
 
 const ControlMenu = ({ value, onChange, optionList }) => {
   return (
@@ -62,7 +53,7 @@ const DiaryList = ({ diaryList }) => {
       </div>
 
       {getProcessedDiaryList().map((it) => (
-        <DiaryItem key={it.id} {...it}/>
+        <DiaryItem key={it.id} {...it} />
       ))}
     </div>
   );
