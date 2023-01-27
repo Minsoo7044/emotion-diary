@@ -37,7 +37,10 @@ const DiaryEditor = ({ isEdit, originData }) => {
   };
 
   const handleRemove = () => {
-    if (window.confirm("일기를 삭제하시겠습니까?")) onRemove(originData.id);
+    if (window.confirm("일기를 삭제하시겠습니까?")) {
+      onRemove(originData.id);
+      navigate("/", { replace: true });
+    }
   };
 
   useEffect(() => {
