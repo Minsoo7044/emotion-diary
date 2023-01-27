@@ -47,7 +47,7 @@ function App() {
     dispatch({ type: "INIT", data: diaryList });
   }, []);
 
-  const dataId = useRef(0);
+  const dataId = useRef(1);
 
   //CREATE
   const onCreate = (date, content, emotion) => {
