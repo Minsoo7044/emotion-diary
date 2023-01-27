@@ -18,11 +18,7 @@ const Edit = () => {
     if (targetDiary) setOriginData(targetDiary);
   }, [navigate, id, diaryList]);
 
-  return (
-    <div>
-      {originData && <DiaryEditor isEdit={true} originData={originData} />}
-    </div>
-  );
+  return <div>{originData && <DiaryEditor isEdit={true} originData={originData} />}</div>;
 };
 
 export default Edit;

@@ -2,17 +2,17 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import MyButton from "./MyButton";
 
-const DiaryItem = ({id, emotion, content, date}) => {
+const DiaryItem = ({ id, emotion, content, date }) => {
   const navigate = useNavigate();
-  const strDate = new Date(parseInt(date)).toLocaleDateString(); 
+  const strDate = new Date(parseInt(date)).toLocaleDateString();
 
   const goDetail = () => {
-    navigate(`/diary/${id}`)
-  }
+    navigate(`/diary/${id}`);
+  };
 
   const goEdit = () => {
-    navigate(`/edit/${id}`)
-  }
+    navigate(`/edit/${id}`);
+  };
 
   return (
     <div className="DiaryItem">
@@ -27,7 +27,7 @@ const DiaryItem = ({id, emotion, content, date}) => {
         <MyButton text={"수정하기"} />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default React.memo(DiaryItem);
